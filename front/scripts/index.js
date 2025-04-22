@@ -1,7 +1,16 @@
+//console.log(tempData);
+
 const moviesContainer = document.getElementById("movieContainer");
 
+$.get("https://students-api.up.railway.app/movies", (data) => {
+  renderCards(data); 
+ });
+
 function renderCards(movies) {
-  movies.forEach((movie) => { 
+movies.forEach((movie) => { 
+  
+//tempData.map((movie) => {
+
     const movieCard = document.createElement("div");
     movieCard.classList.add("moviecard");
 
@@ -42,6 +51,3 @@ function renderCards(movies) {
   });
 }
 
-$.get("https://students-api.up.railway.app/movies", (data) => {
-  renderCards(data); 
-});
