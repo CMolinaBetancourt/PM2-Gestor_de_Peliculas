@@ -1,11 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/front/styles/reset.css">
+  <link rel="stylesheet" href="./">
+  <style>
+    .separador {
+      width: 80px;
+      height: 4px;
+      background-color: #163d92;
+      margin: 25px auto;
+    }
+
+    body {
+      background-color: FFFFFF;
+    }
+
+    header {
+      height: 89px;
+      background-color: #101010;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header img {
+      width: 144.78px;
+      height: 70px;
+      margin-left: 65px;
+      border-radius: 9px;
+    }
+
+    header nav {
+      width: 888px;
+      height: 33px;
+      display: flex;
+      margin-right: 69px;
+    }
+
+    header nav ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    header nav ul li {
+      width: auto;
+      height: 40px;
+      background-color: #3274F6;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+    }
+
+    header nav ul li a {
+      font-family: "Montserrat", sans-serif;
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: none;
+      padding: 4px 16px 4px 16px;
+    }
+
+    header nav ul li a:hover {
+      width: auto;
+      height: 40px;
+      background-color: #fca311;
+      color: #101010;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      transition: 1s;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 20px;
+      height: 60px;
+      background-color: #14213D;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    footer p {
+      color: white;
+      font-weight: 500;
+    }
+
+    .cardsize {
+      width: 18rem
+    }
+
+    .card-img-top {
+      width: 400px;
+      height: 230px;
+    }
+  </style>
+  <title>Como en cine</title>
 </head>
+
 <body>
-    
+  <header class="container-fluid  mb-4">
+    <img src="../build/logopage.jpg" alt="logopage" />
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./cine.html">¿Qué es?</a></li>
+        <li><a href="./historia.html">Historia</a></li>
+        <li><a href="./generos.html">Géneros</a></li>
+        <li><a href="./bootstrap.html">Práctica de Bootstrap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container shadow-lg p-3 mb-5 bg-white rounded">
+
+    <h3 class="h4 text-monospace text-center text-danger mt-4">Esta es una prueba de aplicación de estilos con Bootstrap
+    </h3>
+    <div class="separador"></div>
+    <h1 class="h1 text-center mt-4">Mi películas recomendadas</h1>
+    <div class="separador"></div>
+
+    <section class="border-light rounded  mb-4">
+      <h2 class="h2 mt-4 mb-4">Cuatro razones por las que quiero recomendarles estas películas:</h2>
+      <ul class="list-group list-style">
+        <li class=" list-group-item ">Innovación cinematográfica</li>
+        <li class=" list-group-item">Actuaciones memorables</li>
+        <li class=" list-group-item">Relevancia cultural y social </li>
+        <li class=" list-group-item">Experiencia emocional única</li>
+      </ul>
+    </section>
+
+    <div class="container ">
+      <div class="row">
+        <div class="card cardsize col">
+          <img
+            src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2023/12/migrcion-viaje-patas-arriba-3249458.jpg?tf=1200x"
+            class="card-img-top mt-4" alt="migracion">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Migración</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+
+        <div class="card cardsize col">
+          <img src="https://media.noticiaalminuto.com/wp-content/uploads/2024/04/Mufasa-1000x625.jpg"
+            class="card-img-top mt-4" alt="mufasa">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Mufasa</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+
+        <div class="card cardsize col">
+          <img src="https://pics.filmaffinity.com/Pretty_Woman-774819069-large.jpg" class="card-img-top mt-4"
+            alt="pretty woman">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Mujer bonita</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+
+        <div class="w-100 mt-4"></div>
+
+        <div class="card cardsize col">
+          <img src="https://www.themoviebuff.net/wp-content/uploads/2017/09/the-pursuit-of-happyness.jpg"
+            class="card-img-top mt-4" alt="the pursuit of happiness">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">En busca de la felicidad</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+
+        <div class="card cardsize col">
+          <img src="https://www.aceshowbiz.com/images/still/the_blind_side02.jpg" class="card-img-top mt-4"
+            alt="the blind side">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Un sueño posible</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+
+        <div class="card cardsize col">
+          <img src="https://es.web.img3.acsta.net/medias/nmedia/18/72/82/16/19201077.jpg" class="card-img-top mt-4"
+            alt="invictus">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Invictus</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="container-fluid border border-white">
+    <p class="text-sm-center font-italic">&copy; 2025 Homework Henry </p>
+  </footer>
+
+  <script src="./scripts/tempData.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
+
 </html>

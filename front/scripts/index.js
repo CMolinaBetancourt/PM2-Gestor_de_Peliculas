@@ -4,6 +4,7 @@ const moviesContainer = document.getElementById("movieContainer");
 
 $.get("https://students-api.up.railway.app/movies", (data) => {
   renderCards(data); 
+//console.log(data)
  });
 
 function renderCards(movies) {
