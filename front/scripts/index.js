@@ -43,11 +43,8 @@ movies.forEach((movie) => {
     movieCard.appendChild(title);
     movieCard.appendChild(description);
 
-    description.appendChild(year);
-    description.appendChild(duration);
-    description.appendChild(genre);
-    description.appendChild(rate);
-
+    description.append(year, duration, genre, rate);
+    
     moviesContainer.appendChild(movieCard);
   });
 }
