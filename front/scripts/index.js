@@ -11,6 +11,7 @@ const renderCards = require('./renderCards');
 
  const axios = require('axios');
 
+ document.addEventListener("DOMContentLoaded", () => {
  const fetchMovies = async () => {
    try {
      const data = await axios.get("https://students-api.up.railway.app/movies");
@@ -23,3 +24,5 @@ const renderCards = require('./renderCards');
    }
  }
  fetchMovies();
+  
+ });
