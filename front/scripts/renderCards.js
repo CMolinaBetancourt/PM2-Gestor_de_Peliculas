@@ -1,8 +1,6 @@
 
 function renderCards(movies) {
     movies.forEach((movie) => { 
-      
-    //tempData.map((movie) => {
     
         const movieCard = document.createElement("div");
         movieCard.classList.add("moviecard");
