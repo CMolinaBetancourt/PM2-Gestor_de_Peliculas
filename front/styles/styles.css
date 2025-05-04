@@ -222,3 +222,12 @@ footer p {
     padding: 50px;
 }
 
+#formbuttons {
+   display: flex;
+   justify-content: center;
+   
+}
+
+#submitbotton{
+    margin-right: 10px;
+}
