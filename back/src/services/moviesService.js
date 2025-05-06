@@ -1,20 +1,19 @@
-const tempData = require('../tempData/tempData');
-const getMoviesService = () => {
-  return tempData;
+const Movie = require("../models/Movie");
+
+const getMoviesService = async () => {
+  const movies = await Movie.find();
+  console.log(movies)
+  return movies;
 };
 
-const createMovieService = newMovie => {
-  // Guarda newMovie en la DB (esta lógica se implementaría aquí)
-  return newMovie;
+//newMovie es diferente a createdMovie porque esta última tiene el id
+const createMovieService = async (newMovie) => {
+  const createdMovie = await Movie.create(newMovie);
+  return createdMovie;
 };
 
-const updateMovieService = () => {
-  
-};
-
-const deleteMovieService = () => {
-  
-};
+const updateMovieService = () => {};
+const deleteMovieService = () => {};
 
 module.exports = { getMoviesService, 
   createMovieService, 

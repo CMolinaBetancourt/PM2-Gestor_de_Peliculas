@@ -1,5 +1,5 @@
 
-function renderCards(movies) {
+function renderCards(movies, container) {
     movies.forEach((movie) => { 
     
         const movieCard = document.createElement("div");
@@ -35,7 +35,7 @@ function renderCards(movies) {
     
         description.append(year, duration, genre, rate);
         
-        movieContainer.appendChild(movieCard);
+        container.appendChild(movieCard);
       });
     }
     

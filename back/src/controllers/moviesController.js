@@ -1,23 +1,29 @@
-const { getMoviesService, createMovieService,} = require("../services/moviesService");
-const tempData = require("../tempData/tempData");
+const { getMoviesService, createMovieService, } = require("../services/moviesService");
 
-const getMovies = (req, res) => {
-  const movies = getMoviesService();
-  res
-    .status(200)
-    .json({message: 'Próximamente estarán las películas', movies: movies});
-  };
-
-const createMovie = (req, res) => {
-  const body = req.body;
-  console.log ("createMovie: body linea 14 en MoviesController.js", body)
-  const newMovie = createMovieService (body);
-  res
-    .status(201)
-    .json({message: 'Película creada correctamente', movie: newMovie});
+const getMovies = async (req, res) => {
+  try {
+    const movies = await getMoviesService();
+    console.log(movies)
+    res
+      .status(200)
+      .json({ movies: movies });
+  }
+  catch (err) {
+    res.status(500).json({ message: "Error al acceder a las películas"})
+  }
 };
 
-const updateMovie = (req, res) => {};
-const deleteMovie = (req, res) => {};
+const createMovie = async (req, res) => {
+     const body =  req.body;
+    const newMovie = await createMovieService(body);
+    res
+      .status(201)
+      .json({ message: 'Película creada correctamente', movie: newMovie });
+  
+
+};
+
+const updateMovie = (req, res) => { };
+const deleteMovie = (req, res) => { };
 
 module.exports = { getMovies, createMovie, updateMovie, deleteMovie };

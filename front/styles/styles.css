@@ -231,3 +231,13 @@ footer p {
 #submitbotton{
     margin-right: 10px;
 }
+
+.errorlist {
+    list-style-type: disc; 
+    padding-left: 20px;
+    margin-bottom: 10px;
+    border: 1px solid red; 
+    width: fit-content;
+    
+ 
+}
