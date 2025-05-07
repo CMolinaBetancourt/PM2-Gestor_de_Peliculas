@@ -14,13 +14,11 @@ const getMovies = async (req, res) => {
 };
 
 const createMovie = async (req, res) => {
-     const body =  req.body;
+    const body =  req.body;
     const newMovie = await createMovieService(body);
     res
       .status(201)
       .json({ message: 'Película creada correctamente', movie: newMovie });
-  
-
 };
 
 const updateMovie = (req, res) => { };

@@ -15,7 +15,8 @@ const createMovieService = async (newMovie) => {
 const updateMovieService = () => {};
 const deleteMovieService = () => {};
 
-module.exports = { getMoviesService, 
+module.exports = { 
+  getMoviesService, 
   createMovieService, 
   updateMovieService,
   deleteMovieService  

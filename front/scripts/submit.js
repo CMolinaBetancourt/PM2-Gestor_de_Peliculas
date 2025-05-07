@@ -23,25 +23,25 @@ const createMovie = event => {
   let regexImageUrl = /\.(jpg|png|webp)$/i;
 
   if (!newMovie.title) {
-    errores.push('El título es requerido');
+    errores.push('El título es requerido.');
   }
   if (newMovie.year < 1900 || newMovie.year > 2026) {
-    errores.push('El año no es válido');
+    errores.push('El año no es válido.');
   }
   if (!newMovie.director) {
-    errores.push('El nombre del director es requerido');
+    errores.push('El nombre del director es requerido.');
   }
   if (!regexDuration.test(newMovie.duration)) {
-    errores.push('El formato de la duracion no es válido');
+    errores.push('El formato de la duracion no es válido.');
   }
   if (newMovie.genre.length === 0) {
-    errores.push('El género es requerido');
+    errores.push('El género es requerido.');
   }
   if (!newMovie.rate) {
-    errores.push('El rating es requerido');
+    errores.push('El rating es requerido.');
   }
  if (!regexImageUrl.test(newMovie.poster)) {
-    errores.push("La URL de la imagen debe terminar con .jpg, .png o .webp");
+    errores.push("La URL de la imagen debe terminar con .jpg, .png o .webp.");
   }
 
  

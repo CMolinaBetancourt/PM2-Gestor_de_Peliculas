@@ -1,9 +1,11 @@
 body {
     background-color: FFFFFF;
+    width: auto;
 }
 
 header {
     height: 89px;
+    width: auto;
     background-color: #101010;
     display: flex;
     align-items: center;

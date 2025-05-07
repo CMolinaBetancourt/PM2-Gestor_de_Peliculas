@@ -1,6 +1,6 @@
 const { Router } = require ("express");
-const { getMovies,createMovie, updateMovie, deleteMovie} = require ("../controllers/moviesController");
 const {validations} = require("../middleware/validation");
+const { getMovies,createMovie, updateMovie, deleteMovie} = require ("../controllers/moviesController");
 const router = Router ();
 
 
