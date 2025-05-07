@@ -5,7 +5,7 @@ const validations = (req, res, next) => {
     let regexImageUrl = /\.(jpg|png|webp)$/i;
   
     if (!title || title.length < 3) {
-      errors.push("El titulo es requerido y debe tener minimo 3 caracteres");
+      errors.push("El titulo es requerido y debe tener mínimo 3 caracteres");
     }
   
     if (!regexDuration.test(duration)) {

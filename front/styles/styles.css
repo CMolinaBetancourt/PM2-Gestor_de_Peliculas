@@ -232,12 +232,13 @@ footer p {
     margin-right: 10px;
 }
 
-.errorlist {
+.errors{
+    display: flex;
+    justify-content: center; 
+    color: #c0392b;
+}
+
+.errors li{
     list-style-type: disc; 
-    padding-left: 20px;
-    margin-bottom: 10px;
-    border: 1px solid red; 
-    width: fit-content;
-    
- 
+    font-style: italic;
 }

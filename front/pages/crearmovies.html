@@ -77,7 +77,7 @@
           </div>
 
           <div class="col-md-6">
-            <label for="genre" class="form-label">Género de la película</label> 
+            <label for="genre" class="form-label">Género de la película (selecciona al menos un género)</label> 
             <br>
             <br>
             <label for="generosAccion"><input type="checkbox" id="generosAccion" name="genre" value="Accion"> Acción</label> 
@@ -94,7 +94,7 @@
 
           <div class="col-md-6">
             <label for="rate" class="form-label">Rate de la película</label>
-            <input id="rate" type="number" placeholder="Ej: 10.0" class="form-control" id="validationCustom01">
+            <input id="rate" type="number" step="0.1" placeholder="Ej: 10.0" class="form-control" id="validationCustom01">
           </div>
 
           <div class="col-md-12">
@@ -112,11 +112,9 @@
       </div>
      
 
-      <section class = "errors"> </section>
-
-
-
-      </div>
+      <section> <div class = "errors"></div></section>
+       
+          
     </section>
 
 

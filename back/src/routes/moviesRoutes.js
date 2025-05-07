@@ -5,7 +5,7 @@ const router = Router ();
 
 
 router.get("/", getMovies);
-router.post("/", validations ,createMovie);
+router.post("/", validations, createMovie);
 router.put("/", updateMovie);
 router.delete("/", deleteMovie);
 

@@ -21,8 +21,21 @@ const createMovie = event => {
   console.log(newMovie);
   let regexDuration = /^\d+h\s\d{1,2}min$/;
   let regexImageUrl = /\.(jpg|png|webp)$/i;
+
   if (!newMovie.title) {
-    errores.push('El titulo es requerido');
+    errores.push('El título es requerido');
+  }
+  if (newMovie.year < 1900 || newMovie.year > 2026) {
+    errores.push('El año no es válido');
+  }
+  if (!newMovie.director) {
+    errores.push('El nombre del director es requerido');
+  }
+  if (!regexDuration.test(newMovie.duration)) {
+    errores.push('El formato de la duracion no es válido');
+  }
+  if (newMovie.genre.length === 0) {
+    errores.push('El género es requerido');
   }
   if (!newMovie.rate) {
     errores.push('El rating es requerido');
@@ -30,12 +43,8 @@ const createMovie = event => {
  if (!regexImageUrl.test(newMovie.poster)) {
     errores.push("La URL de la imagen debe terminar con .jpg, .png o .webp");
   }
-  if (newMovie.year < 1900 || newMovie.year > 2026) {
-    errores.push('El año no es valido');
-  }
-  if (!regexDuration.test(newMovie.duration)) {
-    errores.push('El formato de la duracion no es valido');
-  }
+
+ 
   if (errores.length > 0) {
     errorsSections.innerHTML = '';
     const ul = document.createElement('ul');
@@ -50,6 +59,7 @@ const createMovie = event => {
   
   }
   postMovie(newMovie)
+  errorsSections.innerHTML = '';
   
 }
 
