@@ -4,7 +4,16 @@ const mongoose = require ("mongoose");
 
 
 const dbCon = async () => {
-    await mongoose.connect("mongodb+srv://cathemolinab:smkyZstpj8gb2NSm@movies.fq3qtgh.mongodb.net/movies?retryWrites=true&w=majority&appName=movies");
+    
+    const uri = process.env.DATABASE;
+
+    try {
+                await mongoose.connect(uri);
+        console.log("🎉 Conexión a MongoDB exitosa.");
+    } catch (error) {
+        console.error("❌ Error al conectar a MongoDB:", error.message);
+        process.exit(1);
+    }
 };
 
 module.exports = dbCon;
