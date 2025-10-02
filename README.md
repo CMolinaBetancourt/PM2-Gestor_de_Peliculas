@@ -1,4 +1,4 @@
-# 🎬 Full-Stack Movie REST API
+# 🎬 Full-Stack Movie Manager
 
 ## Project Description
 
