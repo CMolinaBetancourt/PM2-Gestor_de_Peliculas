@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
-    "build": "webpack",
-    "watch": "webpack --watch"
-  },
+  "start": "live-server",
+  "build": "webpack --mode production",
+  "prod:build": "dotenv -e ./.env webpack --mode production", 
+  "watch": "webpack --watch"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

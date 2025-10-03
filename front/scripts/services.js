@@ -1,5 +1,6 @@
 const axios = require('axios');
 const renderCards = require('./renderCards');
+const API_BASE_URL= process.env.BACKDEPLOY;
 
 //$.get("https://students-api.up.railway.app/movies", (data) => {
 //  renderCards(data); 
@@ -11,7 +12,7 @@ const renderCards = require('./renderCards');
 
 const fetchMovies = async (container) => {
   try {
-    const { data } = await axios.get("http://localhost:3000/movies");
+    const { data } = await axios.get("${API_BASE_UR}/movies");
     const movies = data.movies;
     renderCards(movies, container);
     console.log('Películas cargadas:', movies);
@@ -22,7 +23,7 @@ const fetchMovies = async (container) => {
 
 const postMovie = async newMovie => {
   try {
-    const res = await axios.post('http://localhost:3000/movies', newMovie);
+    const res = await axios.post('${API_BASE_UR}/movies', newMovie);
     console.log('Película creada con éxito:', res);
     return res;
   } catch (err) {
