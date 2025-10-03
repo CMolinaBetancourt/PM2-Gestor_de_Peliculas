@@ -1,6 +1,6 @@
 const dbCon = require ("./src/config/dbCon");
 const app = require("./src/server");
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 
