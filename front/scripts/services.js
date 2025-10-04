@@ -1,18 +1,15 @@
 const axios = require('axios');
 const renderCards = require('./renderCards');
-const API_BASE_URL= process.env.BACKDEPLOY;
 
-//$.get("https://students-api.up.railway.app/movies", (data) => {
-//  renderCards(data); 
-//console.log(data)
-//});
+// 1. Lógica correcta: usa Render, o usa Localhost como respaldo
+const API_BASE_URL = process.env.BACKDEPLOY || 'http://localhost:3000'; 
 
-//https://students-api.up.railway.app/movies
-
+// ...
 
 const fetchMovies = async (container) => {
   try {
-    const { data } = await axios.get("${API_BASE_UR}/movies");
+    // CORRECCIÓN: Se cambió `${API_BASE_UR}` por `${API_BASE_URL}`
+    const { data } = await axios.get(`${API_BASE_URL}/movies`); 
     const movies = data.movies;
     renderCards(movies, container);
     console.log('Películas cargadas:', movies);
@@ -23,7 +20,8 @@ const fetchMovies = async (container) => {
 
 const postMovie = async newMovie => {
   try {
-    const res = await axios.post('${API_BASE_UR}/movies', newMovie);
+    // CORRECCIÓN: Se cambió `${API_BASE_UR}` por `${API_BASE_URL}`
+    const res = await axios.post(`${API_BASE_URL}/movies`, newMovie);
     console.log('Película creada con éxito:', res);
     return res;
   } catch (err) {

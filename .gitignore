@@ -1,2 +1,6 @@
 node_modules
 .env
+
+# Archivos generados por Webpack que no deben ser versionados
+/front/public/bundle.js
+/front/public/bundle.js.LICENSE.txt
