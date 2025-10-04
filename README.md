@@ -122,4 +122,3 @@ The API implements validations requiring a strict format:
   "rate": 9.2,
   "poster": "https://url-to-the-poster.jpg" 
 }
-```

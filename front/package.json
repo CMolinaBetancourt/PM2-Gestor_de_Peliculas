@@ -6,7 +6,7 @@
   "scripts": {
   "start": "live-server",
   "build": "webpack --mode production",
-  "prod:build": "dotenv -e ./.env webpack --mode production", 
+  "prod:build": "npx dotenv -e ./.env webpack --mode production", 
   "watch": "webpack --watch"
 },
   "keywords": [],
