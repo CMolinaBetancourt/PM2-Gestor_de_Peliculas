@@ -6,13 +6,14 @@
   "scripts": {
   "start": "live-server",
   "build": "webpack --mode production",
-  "prod:build": "npx dotenv -e ./.env webpack --mode production", 
+  "prod:build": "./node_modules/.bin/dotenv -e ./.env webpack --mode production", 
   "watch": "webpack --watch"
 },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "dotenv-cli": "^10.0.0",
     "live-server": "^1.2.2",
     "webpack": "^5.99.6",
     "webpack-cli": "^6.0.1"
